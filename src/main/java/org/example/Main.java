@@ -5,8 +5,6 @@ import org.example.Models.*;
 
 import java.util.PriorityQueue;
 import java.util.Queue;
-import java.util.SortedSet;
-import java.util.TreeSet;
 
 public class Main {
     public static void main(String[] args) {
@@ -22,7 +20,7 @@ public class Main {
         User user1 = new User("James", Category.JUNIOR_STUDENT, "Animal Stories");
         User user2 = new User("Comfort", Category.SENIOR_STUDENT, "Alone forever");
         User user3 = new User("Bob", Category.JUNIOR_STUDENT,"Alone forever");
-        User user4 = new User("Timothy", Category.TEACHER,"Alone forever");
+        User user4 = new User("Timothy", Category.TEACHER,"Animal Stories");
         User user5 = new User("Charles", Category.SENIOR_STUDENT,"Animal Stories");
         User user6 = new User("Tammy", Category.TEACHER,"Animal Stories");
 
@@ -55,25 +53,24 @@ public class Main {
         priorityQueue.add(orderUser5);
         priorityQueue.add(orderUser6);
 
-        Librarian librarian = new Librarian();
+//        Librarian librarian = new Librarian();
+//
+//        System.out.println("***********************");
+//        System.out.println("***********************");
+//        librarian.giveOutBook2(library, fifo);
+//
+//        System.out.println("***********************");
+//        librarian.giveOutBook2(library,priorityQueue);
+//
+//        System.out.println("***********************");
+//        library.availableBooks();
+//        System.out.println("***********************");
 
+       // FunctionalLibrarian codeBack = new FunctionalLibrarian();
+        new FunctionalLibrarian().giveOutBook(library, fifo);
         System.out.println("***********************");
-        System.out.println("***********************");
-        librarian.giveOutBook2(library, fifo);
+        new FunctionalLibrarian().giveOutBook(library, priorityQueue);
 
-        System.out.println("***********************");
-        librarian.giveOutBook2(library,priorityQueue);
 
-        System.out.println("***********************");
-        library.availableBooks();
-        System.out.println("***********************");
-
-        
-        SortedSet<String> sortedSet = new TreeSet<>();
-        sortedSet.add("pop");
-        sortedSet.add("1");
-        sortedSet.add("bob");
-        sortedSet.add("five");
-        System.out.println(sortedSet);
     }
 }

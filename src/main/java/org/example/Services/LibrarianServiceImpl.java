@@ -4,11 +4,12 @@ import org.example.Models.Library;
 import org.example.Models.OrderUser;
 
 import java.util.Queue;
+import java.util.function.BiConsumer;
+import java.util.function.Consumer;
+import java.util.function.Function;
 
 @FunctionalInterface
 public interface LibrarianServiceImpl {
-
-    public void giveOutBook(Library library, Queue<OrderUser> orderUserPriorityQueue);
-
+    void giveOutBook(Library library, Queue<OrderUser> orderUserQueue);
 }
 

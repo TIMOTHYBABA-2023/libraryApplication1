@@ -4,7 +4,7 @@ import org.example.Services.LibrarianServiceImpl;
 
 import java.util.*;
 
-public class Librarian implements LibrarianServiceImpl {
+public class Librarian {
 
     private String name;
 
@@ -25,7 +25,6 @@ public class Librarian implements LibrarianServiceImpl {
     }
 
 
-    @Override
     public void giveOutBook(Library library, Queue<OrderUser> orderUserPriorityQueue) {
 
         List<Book> libraryBookList = library.getBooks();
